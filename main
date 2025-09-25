@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sitio fuera de servicio | Información de contacto</title>
+  <meta name="description" content="Aviso temporal: sitio fuera de servicio. Canales de atención y contacto." />
+  <style>
+    :root{
+      --bg-overlay: rgba(0,0,0,.45);
+      --card-bg: rgba(255,255,255,.92);
+      --brand: #0b6aa2;      /* azul institucional sugerido */
+      --text: #1f2937;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji",sans-serif;
+      color: var(--text);
+      background: #111 url("background.jpg") center/cover no-repeat fixed;
+    }
+    .overlay{
+      position:fixed; inset:0; background: var(--bg-overlay);
+    }
+    main{
+      position:relative; min-height:100dvh; display:grid; place-items:center; padding:24px;
+    }
+    .card{
+      width:min(960px, 100%);
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      padding: clamp(20px, 3vw, 40px);
+      border: 1px solid rgba(255,255,255,.4);
+    }
+    .tag{
+      display:inline-block;
+      font-weight:700;
+      letter-spacing:.02em;
+      text-transform:uppercase;
+      color:#fff;
+      background: var(--brand);
+      padding:6px 12px;
+      border-radius:999px;
+      font-size:.8rem;
+      margin-bottom:12px;
+    }
+    h1{
+      margin: 8px 0 10px;
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      line-height:1.2;
+      color:#0a2a3f;
+    }
+    h2{
+      margin: 24px 0 10px;
+      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      color:#0a2a3f;
+    }
+    p{margin: 0 0 12px; font-size: clamp(1rem, 1.2vw, 1.05rem)}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:16px;
+      margin-top:8px;
+    }
+    .channel{
+      background:#ffffff;
+      border:1px solid #e5e7eb;
+      border-radius:16px;
+      padding:14px;
+      box-shadow: 0 3px 10px rgba(0,0,0,.06);
+    }
+    .channel h3{
+      margin:0 0 6px;
+      font-size:1.05rem;
+      color:#0b3d5a;
+    }
+    .meta{margin:6px 0 0; font-size:.95rem}
+    a{color: var(--brand); text-decoration: none}
+    a:hover{text-decoration: underline}
+    .foot{margin-top:18px; font-size:.95rem; color:#334155}
+    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+    @media (max-width: 920px){
+      .grid{grid-template-columns: 1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .grid{grid-template-columns: 1fr}
+      .card{padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay" aria-hidden="true"></div>
+
+  <main role="main" aria-labelledby="titulo">
+    <section class="card" role="region" aria-label="Aviso de servicio">
+      <span class="tag">Aviso</span>
+      <h1 id="titulo">Sitio web temporalmente fuera de servicio</h1>
+
+      <p><strong>Estimados usuarios,</strong></p>
+      <p>Ofrecemos disculpas por los inconvenientes técnicos presentandos al intentar ingresar a nuestra página web. Actualmente estamos trabajando para restablecer el servicio, el cual estará nuevamente disponible la próxima semana.</p>
+      <p>Mientras tanto, los invitamos a realizar sus trámites o solicitudes a través de nuestras líneas de atención telefónica, por correo electrónico o de manera presencial.</p>
+
+      <h2>Canales de atención disponibles</h2>
+
+      <div class="grid" role="list">
+        <div class="channel" role="listitem">
+          <h3>Atención al usuario</h3>
+          <p class="meta">
+            Teléfono: <a href="tel:+576043856000">604 3856000</a> Ext. 127<br/>
+            Correo: <a href="mailto:atencionausuario@metropol.gov.co">atencionausuario@metropol.gov.co</a>
+          </p>
+        </div>
+
+        <div class="channel" role="listitem">
+          <h3>Unidad de Reacción Ambiental (URA)</h3>
+          <p class="meta">
+            Teléfono: <a href="tel:+576043856003">604 3856003</a><br/>
+            WhatsApp: <a href="https://wa.me/573108969476" target="_blank" rel="noopener">310 8969476</a><br/>
+            Correo: <a href="mailto:emergenciaamva@metropol.gov.co">emergenciaamva@metropol.gov.co</a><br/>
+            Horario: Todos los días, de 6:00 a.m. a 7:00 p.m.
+          </p>
+        </div>
+
+        <div class="channel" role="listitem">
+          <h3>Emergencias de Fauna Silvestre</h3>
+          <p class="meta">
+            Teléfono: <a href="tel:+573046300090">304 6300090</a><br/>
+            Horario: Atención 24/7
+          </p>
+        </div>
+      </div>
+
+      <p class="foot">Agradecemos su comprensión y confianza. Estamos trabajando para brindarles un mejor servicio cada día.</p>
+      <span class="sr-only">Fondo con imagen 1920x1080.</span>
+    </section>
+  </main>
+</body>
+</html>
